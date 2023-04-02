@@ -55,3 +55,6 @@ for i, j in zip(range(1,12), misclassified.index[:10]):
     plt.imshow(X_test[j], cmap='gray_r')
     plt.title('y_test: ' + str(y_test[j]) + '\n' + 'y_pred: ' + str(y_pred_classes[j]), color='black', fontsize=12)
 plt.show()
+
+# Zapisanie modelu do pliku
+model.save('mnist_model.h5')
