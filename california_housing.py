@@ -78,4 +78,11 @@ scaled_new_property = scaler.transform(new_property_df)
 predicted_price = model.predict(scaled_new_property)
 
 # Wypisanie prognozowanej ceny
-print(f'Prognozowana cena nieruchomości: {predicted_price[0][0]:.3f} (w jednostkach 100,000 USD)')
+print(f'Prognozowana cena nieruchomości: {predicted_price[0][0]:.3f} (w jednostkach 100.000 USD)')
+
+# Obliczenie wartości nieruchomości
+property_value = predicted_price[0][0] * 100000
+# Formatowanie wartości z separatorem
+formatted_value = format(property_value, ',.0f').replace(',', '.')
+# Wydrukowanie prognozowanej ceny nieruchomości z separatorem
+print(f'Prognozowana cena nieruchomości: {formatted_value} dolarów.')
