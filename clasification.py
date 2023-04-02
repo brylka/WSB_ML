@@ -32,7 +32,7 @@ model.compile(optimizer='adam',
 print(model.summary())
 
 # Trenowanie modelu
-history = model.fit(X_train, y_train, epochs=15)
+history = model.fit(X_train, y_train, epochs=10)
 
 model.evaluate(X_test, y_test, verbose=2)
 
